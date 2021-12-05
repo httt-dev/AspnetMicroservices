@@ -49,3 +49,15 @@ Simple asp.net core microservices
         POST        api/v1/Catalog
         PUT         api/v1/Catalog
         DELETE      api/v1/Catalog/{id}
+
+# Basket Redis API
+         docker pull redis
+         docker run -d -p 6379:6379 --name aspnetrun-redis redis
+         docker exec -it aspnetrun-redis /bin/bash
+
+         Method      URL
+        -----       ----------------------------
+        GET         api/v1/Basket
+        POST        api/v1/Basket
+        POST        api/v1/Basket/Checkout
+        DELETE      api/v1/Basket/{userName}
